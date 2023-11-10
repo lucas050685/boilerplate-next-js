@@ -1,14 +1,20 @@
-'use client'
+'use client';
 
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { QueryClient, QueryClientProvider, QueryKey } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import { PropsWithChildren, useState } from 'react';
+import { PropsWithChildren } from 'react';
 
-export function QueryProvider({ children }: PropsWithChildren){
-  const [queryClient] = useState(() => new QueryClient());
+const queryClient = new QueryClient();
 
-  return <QueryClientProvider client={queryClient}>
-    <ReactQueryDevtools initialIsOpen={false} />
+export function getQueryData<DataType = unknown>(keys: QueryKey) {
+  return queryClient.getQueryData<DataType>(keys);
+}
+
+export function QueryProvider({ children }: PropsWithChildren) {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <ReactQueryDevtools initialIsOpen={false} />
       {children}
-  </QueryClientProvider>;
+    </QueryClientProvider>
+  );
 }

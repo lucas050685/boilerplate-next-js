@@ -1,2 +1,2 @@
-export * from './Query/QueryProvider';
+export * from './Query';
 export * from './Notifications';
