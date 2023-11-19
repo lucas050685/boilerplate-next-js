@@ -1,6 +1,7 @@
 #!/bin/bash
 echo "";
 echo "Deplyment in vercel...";
+
 if [ "${VERCEL_TOKEN}" == '' ]
 then
   echo "";
@@ -10,4 +11,4 @@ then
   exit 1;
 fi
 
-yarn vercel --prod -y --token $VERCEL_TOKEN;
+# yarn vercel $@ -y --token $VERCEL_TOKEN;

@@ -53,6 +53,12 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This boileplate provides a built-in script to enable the deployment via pipeline.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The script lives in `./scripts/vercel-deployment.sh` file, and you can run it via a package script.
+
+This script requires a the VERCEL_TOKEN exposed in the shell.
+```bash
+export VERCEL_TOKEN=<my vercel token>
+yarn deploy
+```

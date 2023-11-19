@@ -4,7 +4,7 @@ import { queryServerData, QueryServerProvider } from '@/providers/Query';
 const fetchDummyData = () => {
   return new Promise<any>((resolve) => {
     setTimeout(() => {
-      resolve({ name: 'Cris' });
+      resolve({ name: process.env.DUMMY_NAME ?? 'No name' });
     }, 500);
   });
 };
