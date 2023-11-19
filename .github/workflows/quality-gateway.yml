@@ -1,0 +1,16 @@
+name: quality-gateway
+run-name: Quality Gateway
+on: 
+  pull-request:
+    branches:
+      - main
+      - staging
+    jobs:
+      test:
+        steps:
+          - uses: actions/checkout@v4
+          - uses: actions/setup-node@v3
+            with:
+              node-version: '18'
+          - run: echo "runing tests..."
+          - run: yarn test
