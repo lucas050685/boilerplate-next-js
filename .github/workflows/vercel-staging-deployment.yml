@@ -2,7 +2,7 @@ name: vercel-prod-deployment
 run-name: Vercel production deployment
 on:
   push:
-    branches: ['main']
+    branches: ['main', 'staging']
 jobs:
   deployment:
     runs-on: ubuntu-latest
@@ -14,4 +14,4 @@ jobs:
         with:
           node-version: '18'
       - run: yarn install
-      - run: yarn deploy --prod
+      - run: yarn deploy
