@@ -6,6 +6,8 @@ on:
 jobs:
   deployment:
     runs-on: ubuntu-latest
+    env:
+      VERCEL_USER_NAME: ${{ secrets.VERCEL_USER_NAME }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
