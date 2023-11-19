@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "...deplyment in vercel";
-echo $VERCEL_USER_NAME;
+yarn vercel --token $VERCEL_TOKEN;
