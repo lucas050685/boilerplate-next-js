@@ -12,3 +12,4 @@ jobs:
         with:
           node-version: '18'
       - run: yarn install
+      - run: chmod +x ./scripts/vercel-deplyment.sh && ./scripts/vercel-deplyment.sh
