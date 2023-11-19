@@ -1,8 +1,8 @@
 #!/bin/bash
 echo "";
 echo "Deplyment in vercel...";
-
-if [ "${VERCE_TOKEN}" == '' ]
+echo "TOKEN ${VERCEL_TOKEN} <<";
+if [ "${VERCEL_TOKEN}" == '' ]
 then
   echo "";
   echo "VERCEL_TOKEN is required to deploy the application";
