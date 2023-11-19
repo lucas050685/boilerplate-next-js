@@ -4,7 +4,7 @@ import { queryServerData, QueryServerProvider } from '@/providers/Query';
 const fetchDummyData = () => {
   return new Promise<any>((resolve) => {
     setTimeout(() => {
-      resolve({ name: 'Bryan' });
+      resolve({ name: 'Cris' });
     }, 500);
   });
 };

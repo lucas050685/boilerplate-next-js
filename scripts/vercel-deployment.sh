@@ -11,4 +11,4 @@ then
   exit 1;
 fi
 
-yarn vercel --prod --token $VERCEL_TOKEN;
+yarn vercel --prod -y --token $VERCEL_TOKEN;
