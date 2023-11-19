@@ -1,7 +1,6 @@
 #!/bin/bash
 echo "";
 echo "Deplyment in vercel...";
-echo "TOKEN ${VERCEL_TOKEN} <<";
 if [ "${VERCEL_TOKEN}" == '' ]
 then
   echo "";
