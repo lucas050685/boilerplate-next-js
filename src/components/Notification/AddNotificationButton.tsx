@@ -28,7 +28,7 @@ export function AddNotificationButton() {
 
   return (
     <button className="p-4 bg-neutral-400 text-sm text-white rounded-full" onClick={handleClick}>
-      {client?.name ?? 'Add Notification'}
+      Name: {client?.name ?? 'Add Notification'}
     </button>
   );
 }

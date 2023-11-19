@@ -1,8 +1,8 @@
-name: vercel-prod-deployment
-run-name: Vercel production deployment
+name: vercel-stg-deployment
+run-name: Vercel staging deployment
 on:
   push:
-    branches: ['main', 'staging']
+    branches: ['staging']
 jobs:
   deployment:
     runs-on: ubuntu-latest
