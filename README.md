@@ -62,3 +62,5 @@ This script requires a the VERCEL_TOKEN exposed in the shell.
 export VERCEL_TOKEN=<my vercel token>
 yarn deploy
 ```
+
+In this project the Vercel auto deployment is disabled. You can change this behavior editing the file `vercel.json`. You can knoe more about this in the [official documentation](https://vercel.com/docs/projects/project-configuration/git-configuration)
